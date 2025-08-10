@@ -611,14 +611,13 @@ footer a {
     to { opacity: 1; }
 }
 
-/* Ski animations on scroll - FIXED DIRECTION */
+/* Ski animations on scroll - RIGHT TO LEFT DOWNHILL */
 .ski-animation {
     position: fixed;
     font-size: 30px;
     opacity: 0;
     pointer-events: none;
     z-index: 999;
-    transform: scaleX(-1); /* Face the right direction */
 }
 
 .ski-animation.active {
@@ -628,7 +627,7 @@ footer a {
 @keyframes skiDownSlope {
     0% {
         opacity: 0;
-        transform: scaleX(-1) translateX(-100px) translateY(0) rotate(15deg);
+        transform: translateX(calc(100vw + 50px)) translateY(0) rotate(-10deg);
     }
     20% {
         opacity: 1;
@@ -638,7 +637,7 @@ footer a {
     }
     100% {
         opacity: 0;
-        transform: scaleX(-1) translateX(calc(100vw + 100px)) translateY(150px) rotate(20deg);
+        transform: translateX(-100px) translateY(200px) rotate(-15deg);
     }
 }
 
