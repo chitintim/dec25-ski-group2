@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# AI context files (not for public viewing)
+CLAUDE.md
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Local development files
+*.log
