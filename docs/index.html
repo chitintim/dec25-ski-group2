@@ -13,7 +13,10 @@
 <body>
     <!-- Progress Indicator -->
     <div class="progress-indicator">
-        <div class="progress-bar"></div>
+        <div class="progress-track">
+            <div class="progress-bar"></div>
+            <div class="progress-skier">⛷️</div>
+        </div>
         <div class="progress-sections">
             <div class="progress-dot active" data-section="hero">
                 <span>Intro</span>
@@ -22,10 +25,13 @@
                 <span>Chalet</span>
             </div>
             <div class="progress-dot" data-section="location">
-                <span>Location</span>
+                <span>La Tania</span>
             </div>
             <div class="progress-dot" data-section="costs">
                 <span>Costs</span>
+            </div>
+            <div class="progress-dot" data-section="gallery">
+                <span>Photos</span>
             </div>
             <div class="progress-dot" data-section="join">
                 <span>Join</span>
@@ -66,7 +72,7 @@
                         
                         <div class="chalet-features">
                             <div class="feature-card">
-                                <h3>Sleeps 10-12</h3>
+                                <h3>🏠 Sleeps 10-12</h3>
                                 <ul>
                                     <li>6 bedrooms total</li>
                                     <li>4 bathrooms</li>
@@ -75,21 +81,21 @@
                                 </ul>
                             </div>
                             <div class="feature-card">
-                                <h3>Amenities</h3>
+                                <h3>✨ Premium Features</h3>
                                 <ul>
-                                    <li>Hot tub on terrace</li>
-                                    <li>Sauna</li>
-                                    <li>Mountain views</li>
-                                    <li>Fully equipped kitchen</li>
+                                    <li>🛁 Private hot tub on terrace</li>
+                                    <li>🧖 Private sauna</li>
+                                    <li>🏔️ Stunning mountain views</li>
+                                    <li>👨‍🍳 Fully equipped kitchen</li>
                                 </ul>
                             </div>
                             <div class="feature-card">
-                                <h3>Included</h3>
+                                <h3>✅ All Included</h3>
                                 <ul>
-                                    <li>Beds made on arrival</li>
-                                    <li>Towels & bathrobes</li>
-                                    <li>Mid & end cleaning</li>
-                                    <li>2 parking spaces</li>
+                                    <li>🛏️ Beds made on arrival</li>
+                                    <li>🧺 Towels & bathrobes</li>
+                                    <li>🧹 Mid & end cleaning</li>
+                                    <li>🚗 2 parking spaces</li>
                                 </ul>
                             </div>
                         </div>
@@ -104,21 +110,32 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Why La Tania?</h2>
+                    <p class="section-subtitle">Well guys, for those who know me, you know I'm obsessed with this place...</p>
                 </div>
                 
-                <div class="location-grid">
-                    <div class="location-card">
-                        <h3>Perfect Base</h3>
-                        <p>Quiet village between Courchevel & Méribel. Quick gondola to Courchevel 1850, ski down the blue run home.</p>
+                <div class="location-personal">
+                    <p>After 20+ weeks here, I can tell you La Tania is the <strong>sweet spot</strong> of the 3 Valleys. It's budget-friendly access to Courchevel (that gondola gets you to 1850 in minutes!), but without the crazy prices and crowds. The skiing here is so much quieter than the other resorts - you'll actually have space to carve!</p>
+                    
+                    <div class="location-highlights">
+                        <div class="highlight">
+                            <span class="emoji">🎿</span>
+                            <p><strong>Quiet slopes:</strong> Whilst everyone battles in Méribel, we'll be cruising empty pistes</p>
+                        </div>
+                        <div class="highlight">
+                            <span class="emoji">🍕</span>
+                            <p><strong>Food options:</strong> From Bouc Blanc's pizzas to La Taiga's tartiflette - all walkable!</p>
+                        </div>
+                        <div class="highlight">
+                            <span class="emoji">💰</span>
+                            <p><strong>Smart budget:</strong> La Tania prices, Courchevel skiing - best of both worlds</p>
+                        </div>
+                        <div class="highlight">
+                            <span class="emoji">🚡</span>
+                            <p><strong>Perfect location:</strong> Between Courchevel & Méribel, access all 600km easily</p>
+                        </div>
                     </div>
-                    <div class="location-card">
-                        <h3>3 Valleys Access</h3>
-                        <p>600km of pistes, 328 runs, altitude up to 3,230m. The world's largest ski area at your doorstep.</p>
-                    </div>
-                    <div class="location-card">
-                        <h3>Village Charm</h3>
-                        <p>Car-free centre, authentic atmosphere, good restaurants, 25 mins from Courchevel's après-ski.</p>
-                    </div>
+                    
+                    <p class="location-footer">Trust me on this - La Tania is where locals would stay. Ski down the blue run home for lunch, hot tub in the afternoon, walk to dinner. Perfect.</p>
                 </div>
             </div>
         </section>
@@ -216,6 +233,23 @@
                 <div class="total-box">
                     <p class="total-label">All-in estimate (with equipment & food):</p>
                     <p class="total-amount">£1,800-2,100 per person</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-compact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📸 Chalet Photos</h2>
+                    <p class="section-subtitle">Check out our cozy mountain home for the week</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <img src="images/18e963e8-d34c-4893-83c4-bb60a7f36d0a.jpg" alt="Chalet Le Koala" loading="lazy">
+                    <img src="images/20ea30cc-3f78-4e6b-99bf-dda209494f3f.jpg" alt="Chalet Le Koala" loading="lazy">
+                    <img src="images/3a6380cb-2c30-4f56-a34b-11fdbc6b30b9.jpg" alt="Chalet Le Koala" loading="lazy">
+                    <img src="images/7f3af9b2-10af-4b74-812e-a38c90d373d6.jpg" alt="Chalet Le Koala" loading="lazy">
+                    <img src="images/f96cba51-e7b3-4e6b-9ba5-562e9666bdae.jpg" alt="Chalet Le Koala" loading="lazy">
                 </div>
             </div>
         </section>

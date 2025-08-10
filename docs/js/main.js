@@ -1,15 +1,23 @@
-// Progress indicator functionality
+// Progress indicator functionality with skier animation
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id], header[id]');
-    const progressBar = document.querySelector('.progress-bar::after');
     const progressDots = document.querySelectorAll('.progress-dot');
+    const progressSkier = document.querySelector('.progress-skier');
     
     // Calculate scroll percentage
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
     
-    // Update progress bar
+    // Update progress bar height
+    const progressBar = document.querySelector('.progress-bar');
     if (progressBar) {
-        document.documentElement.style.setProperty('--scroll-percent', scrollPercent + '%');
+        progressBar.style.height = scrollPercent + '%';
+    }
+    
+    // Update skier position
+    if (progressSkier) {
+        const trackHeight = 250; // Match CSS track height
+        const skierPosition = (scrollPercent / 100) * (trackHeight - 30); // Adjust for skier size
+        progressSkier.style.top = skierPosition + 'px';
     }
     
     // Update active section
@@ -53,7 +61,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Ski animation on scroll
+// Ski animation on scroll - FIXED to go downhill
 let lastScrollY = window.scrollY;
 let ticking = false;
 let skiAnimationTimeout;
@@ -62,7 +70,7 @@ function createSkiAnimation() {
     const ski = document.createElement('div');
     ski.className = 'ski-animation';
     ski.innerHTML = '⛷️';
-    ski.style.top = Math.random() * window.innerHeight + 'px';
+    ski.style.top = Math.random() * (window.innerHeight / 2) + 'px';
     document.body.appendChild(ski);
     
     setTimeout(() => {
@@ -115,6 +123,75 @@ function createSnowflake() {
 // Create snowflakes periodically
 setInterval(createSnowflake, 1000);
 
+// Gallery lightbox functionality
+function createLightbox() {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-nav">
+            <span class="lightbox-prev">‹</span>
+            <span class="lightbox-next">›</span>
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+    
+    const images = Array.from(document.querySelectorAll('.gallery-grid img'));
+    let currentIndex = 0;
+    
+    function showImage(index) {
+        currentIndex = index;
+        const img = images[index];
+        lightbox.querySelector('.lightbox-image').src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLight() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightbox.querySelector('.lightbox-image').src = images[currentIndex].src;
+    }
+    
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightbox.querySelector('.lightbox-image').src = images[currentIndex].src;
+    }
+    
+    // Event listeners
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => showImage(index));
+    });
+    
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLight);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', prevImage);
+    lightbox.querySelector('.lightbox-next').addEventListener('click', nextImage);
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLight();
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLight();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'ArrowRight') nextImage();
+    });
+}
+
+// Initialize lightbox when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createLightbox);
+} else {
+    createLightbox();
+}
+
 // Parallax effect for feature cards
 const observerOptions = {
     threshold: 0.1,
@@ -131,7 +208,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe feature cards and location cards
-document.querySelectorAll('.feature-card, .location-card').forEach(card => {
+document.querySelectorAll('.feature-card, .highlight').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
     observer.observe(card);
@@ -147,8 +224,71 @@ style.textContent = `
         }
     }
     
-    .progress-bar::after {
-        height: var(--scroll-percent, 0%) !important;
+    /* Lightbox styles */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    .lightbox.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .lightbox-image {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+    }
+    
+    .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    .lightbox-close:hover {
+        transform: scale(1.2);
+    }
+    
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        transform: translateY(-50%);
+    }
+    
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 60px;
+        color: white;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+        user-select: none;
+    }
+    
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+        opacity: 1;
     }
 `;
 document.head.appendChild(style);

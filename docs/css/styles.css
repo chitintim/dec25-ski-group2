@@ -32,18 +32,18 @@ h1, h2, h3 {
 
 h1 {
     font-size: clamp(2.5rem, 8vw, 4rem);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 h2 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     color: var(--primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
 }
 
 .container {
@@ -64,24 +64,34 @@ h3 {
     animation-delay: 1s;
 }
 
-.progress-bar {
-    width: 3px;
-    height: 200px;
-    background: rgba(255,255,255,0.2);
+.progress-track {
+    width: 4px;
+    height: 250px;
+    background: rgba(30, 58, 95, 0.2);
     border-radius: 3px;
     position: relative;
-    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.progress-bar::after {
-    content: '';
+.progress-bar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 0%;
-    background: var(--accent);
+    background: linear-gradient(180deg, var(--accent), var(--secondary));
     transition: height 0.3s ease;
+    border-radius: 3px;
+}
+
+.progress-skier {
+    position: absolute;
+    left: -18px;
+    top: 0;
+    font-size: 28px;
+    transition: top 0.3s ease;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+    transform: scaleX(-1) rotate(15deg);
 }
 
 .progress-sections {
@@ -98,17 +108,19 @@ h3 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    border: 2px solid rgba(255,255,255,0.5);
+    background: white;
+    border: 2px solid rgba(30, 58, 95, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .progress-dot.active {
     background: var(--accent);
     border-color: var(--accent);
     transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.4);
 }
 
 .progress-dot span {
@@ -116,11 +128,12 @@ h3 {
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.8);
+    background: rgba(30, 58, 95, 0.95);
     color: white;
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.75rem;
+    font-weight: 600;
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
@@ -133,7 +146,7 @@ h3 {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +161,7 @@ h3 {
 .hero::after {
     content: '⛷️';
     position: absolute;
-    font-size: 100px;
+    font-size: 80px;
     opacity: 0.05;
     animation: float 20s ease-in-out infinite;
 }
@@ -190,16 +203,16 @@ h3 {
 }
 
 .hero-dates {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     opacity: 0.9;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 300;
 }
 
 .hero-message {
     max-width: 700px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -207,23 +220,23 @@ h3 {
 }
 
 .hero-message p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
 
 .signature {
     font-style: italic;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .scroll-hint {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     opacity: 0.7;
 }
 
@@ -234,7 +247,7 @@ h3 {
 
 /* Sections */
 .section-compact {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 .section-alt {
@@ -243,30 +256,30 @@ h3 {
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .section-subtitle {
     color: #666;
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.3rem;
 }
 
 /* Chalet Section */
 .chalet-intro {
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     text-align: center;
 }
 
 .chalet-intro p {
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
 }
 
 .note {
     background: #fff3cd;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 8px;
     border-left: 4px solid #ffc107;
 }
@@ -274,13 +287,13 @@ h3 {
 .chalet-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 3rem;
+    gap: 20px;
+    margin-bottom: 2rem;
 }
 
 .feature-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     transform: translateY(0);
@@ -292,21 +305,22 @@ h3 {
 .feature-card::before {
     content: '🎿';
     position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 60px;
+    top: -15px;
+    right: -15px;
+    font-size: 50px;
     opacity: 0.05;
     transform: rotate(-15deg);
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
 }
 
 .feature-card h3 {
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.15rem;
 }
 
 .feature-card ul {
@@ -314,22 +328,13 @@ h3 {
 }
 
 .feature-card li {
-    padding: 0.5rem 0;
-    padding-left: 25px;
-    position: relative;
-}
-
-.feature-card li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
 }
 
 .btn-airbnb {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 12px 35px;
     background: var(--secondary);
     color: white;
     text-decoration: none;
@@ -339,56 +344,76 @@ h3 {
     margin: 0 auto;
     display: block;
     width: fit-content;
+    font-size: 0.95rem;
 }
 
 .btn-airbnb:hover {
     background: #d62828;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
 }
 
 /* Location Section */
-.location-grid {
+.location-personal {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-personal p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.location-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 2rem 0;
 }
 
-.location-card {
-    text-align: center;
-    padding: 2rem;
+.highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 1rem;
     background: white;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.location-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient);
+.highlight:hover {
+    transform: translateX(5px);
 }
 
-.location-card h3 {
+.highlight .emoji {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.highlight p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.location-footer {
+    text-align: center;
+    font-weight: 600;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 /* Costs Section */
 .costs-container {
     display: grid;
-    gap: 30px;
-    margin-bottom: 3rem;
+    gap: 25px;
+    margin-bottom: 2rem;
 }
 
 .cost-category {
     background: white;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
@@ -398,21 +423,21 @@ h3 {
 
 .cost-category h3 {
     color: var(--primary);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 .cost-items {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .cost-item {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: start;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -423,17 +448,17 @@ h3 {
 
 .cost-label strong {
     display: block;
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .cost-label span {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .cost-amount {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--secondary);
     text-align: right;
@@ -441,36 +466,37 @@ h3 {
 
 .cost-note {
     grid-column: 1 / -1;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #666;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 .subtotal {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
     border-top: 2px solid var(--accent);
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .budget-items {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .budget-items span {
-    padding: 0.75rem;
+    padding: 0.6rem;
     background: var(--light);
     border-radius: 8px;
     border-left: 3px solid var(--accent);
+    font-size: 0.95rem;
 }
 
 .total-box {
     background: var(--gradient);
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     text-align: center;
     max-width: 600px;
@@ -478,14 +504,39 @@ h3 {
 }
 
 .total-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     opacity: 0.95;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .total-amount {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
 /* Join Section */
@@ -493,6 +544,7 @@ h3 {
     background: var(--primary);
     color: white;
     text-align: center;
+    padding: 50px 0;
 }
 
 .section-cta h2 {
@@ -507,30 +559,35 @@ h3 {
 .next-steps {
     display: flex;
     justify-content: space-around;
-    margin: 3rem 0;
+    margin: 2rem 0;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .step {
     flex: 1;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .step-number {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: white;
     color: var(--primary);
     border-radius: 50%;
-    line-height: 40px;
+    line-height: 35px;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.step p {
+    font-size: 0.95rem;
 }
 
 .final-note {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
@@ -538,8 +595,9 @@ h3 {
 footer {
     background: var(--dark);
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
+    font-size: 0.9rem;
 }
 
 footer a {
@@ -553,23 +611,24 @@ footer a {
     to { opacity: 1; }
 }
 
-/* Ski animations on scroll */
+/* Ski animations on scroll - FIXED DIRECTION */
 .ski-animation {
     position: fixed;
     font-size: 30px;
     opacity: 0;
     pointer-events: none;
     z-index: 999;
+    transform: scaleX(-1); /* Face the right direction */
 }
 
 .ski-animation.active {
-    animation: skiAcross 3s ease-out forwards;
+    animation: skiDownSlope 3s ease-out forwards;
 }
 
-@keyframes skiAcross {
+@keyframes skiDownSlope {
     0% {
         opacity: 0;
-        transform: translateX(-100px) translateY(0) rotate(-20deg);
+        transform: scaleX(-1) translateX(-100px) translateY(0) rotate(15deg);
     }
     20% {
         opacity: 1;
@@ -579,7 +638,7 @@ footer a {
     }
     100% {
         opacity: 0;
-        transform: translateX(calc(100vw + 100px)) translateY(50px) rotate(20deg);
+        transform: scaleX(-1) translateX(calc(100vw + 100px)) translateY(150px) rotate(20deg);
     }
 }
 
@@ -606,18 +665,30 @@ footer a {
     }
     
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero {
+        min-height: 100vh;
     }
     
     .hero-message {
-        padding: 1.5rem;
+        padding: 1.2rem;
+    }
+    
+    .section-compact {
+        padding: 30px 0;
     }
     
     .chalet-features {
         grid-template-columns: 1fr;
     }
     
-    .location-grid {
+    .location-highlights {
         grid-template-columns: 1fr;
     }
     
@@ -627,10 +698,14 @@ footer a {
     
     .cost-amount {
         text-align: left;
-        margin-top: 0.5rem;
+        margin-top: 0.3rem;
     }
     
     .next-steps {
         flex-direction: column;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }
