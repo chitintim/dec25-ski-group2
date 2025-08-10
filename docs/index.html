@@ -4,229 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Tania Ski Trip - December 2025 | Join Tim's Group</title>
-    <meta name="description" content="Join Tim's ski group for an unforgettable week in La Tania, 3 Valleys. 28 Dec 2025 - 4 Jan 2026. Luxury chalet with hot tub, perfect location, great value.">
+    <meta name="description" content="Join Tim's ski group for an unforgettable week in La Tania, 3 Valleys. 28 Dec 2025 - 4 Jan 2026. Cozy chalet with hot tub, perfect location, great value.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="progress-bar"></div>
+        <div class="progress-sections">
+            <div class="progress-dot active" data-section="hero">
+                <span>Intro</span>
+            </div>
+            <div class="progress-dot" data-section="chalet">
+                <span>Chalet</span>
+            </div>
+            <div class="progress-dot" data-section="location">
+                <span>Location</span>
+            </div>
+            <div class="progress-dot" data-section="costs">
+                <span>Costs</span>
+            </div>
+            <div class="progress-dot" data-section="join">
+                <span>Join</span>
+            </div>
+        </div>
+    </div>
+
+    <header id="hero" class="hero">
         <div class="hero-content">
-            <h1>La Tania Ski Trip</h1>
-            <p class="hero-subtitle">New Year's Week 2025/26</p>
-            <p class="hero-dates">28th December 2025 - 4th January 2026</p>
-            <a href="#pricing" class="cta-button">View Pricing</a>
-        </div>
-    </header>
-
-    <nav class="sticky-nav">
-        <div class="container">
-            <a href="#about">About</a>
-            <a href="#accommodation">Chalet</a>
-            <a href="#location">Location</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Join Us</a>
-        </div>
-    </nav>
-
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>A Personal Invitation from Tim</h2>
-                <div class="intro-message">
-                    <p>Hello friends!</p>
-                    <p>I'm organising another ski trip to La Tania for New Year's week, and I'd love for you to join us. After spending over 20 weeks skiing in the 3 Valleys over the past few seasons (mostly based in La Tania), I can honestly say this is one of the best spots in the Alps for a perfect ski holiday.</p>
-                    <p>Following the success of our first group trip, I've found an even better chalet for this second adventure. Le Koala offers luxury amenities at a reasonable price, and with 10-12 people sharing, it becomes incredibly good value for a New Year's week in one of the world's best ski areas.</p>
-                    <p>This page has all the information you need to decide if you'd like to join. Have a look around, check the pricing, and let me know if you have any questions!</p>
-                    <p class="signature">- Tim</p>
+            <div class="hero-main">
+                <h1>La Tania<br><span class="hero-accent">New Year's Week</span></h1>
+                <p class="hero-dates">28 December 2025 — 4 January 2026</p>
+                
+                <div class="hero-message">
+                    <p>Hi friends! I'm organising a ski trip to La Tania for New Year's week. After spending 20+ weeks in the 3 Valleys (mostly in La Tania), I can honestly say this is one of the best spots in the Alps.</p>
+                    <p>I'm already planning the week before with another group, so I'm now looking to fill the second week. I've found a cozy chalet at an excellent price point - have a look and let me know if you're interested!</p>
+                    <p class="signature">— Tim</p>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="scroll-hint">↓ Scroll to explore</div>
+    </header>
 
-        <section id="accommodation" class="section section-alt">
+    <main>
+        <section id="chalet" class="section-compact">
             <div class="container">
-                <h2>Chalet Le Koala</h2>
-                <div class="accommodation-grid">
-                    <div class="accommodation-info">
-                        <h3>Your Home in the Mountains</h3>
-                        <p>I've secured Chalet Le Koala, a stunning recently-built wooden chalet that combines Alpine charm with modern luxury. Located in the peaceful chalet neighbourhood of La Tania, it's just a short walk from the Morettaz Blanche piste and the main gondola.</p>
+                <div class="section-header">
+                    <h2>Chalet Le Koala</h2>
+                    <p class="section-subtitle">A cozy mountain retreat in the heart of La Tania</p>
+                </div>
+                
+                <div class="chalet-grid">
+                    <div class="chalet-main">
+                        <div class="chalet-intro">
+                            <p>I've found Chalet Le Koala - a recently-built wooden chalet that's warm, cozy, and perfectly located. It's in the peaceful chalet area, just minutes from the slopes and village centre. <strong>Excellent value for New Year's week</strong> (subject to host confirmation).</p>
+                            <p class="note">⚠️ Please don't book directly on Airbnb - I'm coordinating with the host for our group booking. I'm also requesting more photos and details.</p>
+                        </div>
                         
-                        <div class="features-grid">
-                            <div class="feature">
-                                <h4>Accommodation</h4>
+                        <div class="chalet-features">
+                            <div class="feature-card">
+                                <h3>Sleeps 10-12</h3>
                                 <ul>
-                                    <li>6 bedrooms (sleeps 10-12)</li>
+                                    <li>6 bedrooms total</li>
                                     <li>4 bathrooms</li>
-                                    <li>Large open-plan living area</li>
-                                    <li>Fully equipped kitchen</li>
-                                    <li>Two parking spaces</li>
+                                    <li>Comfortably fits 10</li>
+                                    <li>Possible room pricing tiers</li>
                                 </ul>
                             </div>
-                            <div class="feature">
-                                <h4>Luxury Amenities</h4>
+                            <div class="feature-card">
+                                <h3>Amenities</h3>
                                 <ul>
-                                    <li>Outdoor hot tub</li>
+                                    <li>Hot tub on terrace</li>
                                     <li>Sauna</li>
-                                    <li>Spa facilities</li>
                                     <li>Mountain views</li>
-                                    <li>WiFi throughout</li>
+                                    <li>Fully equipped kitchen</li>
                                 </ul>
                             </div>
-                            <div class="feature">
-                                <h4>Included Services</h4>
+                            <div class="feature-card">
+                                <h3>Included</h3>
                                 <ul>
                                     <li>Beds made on arrival</li>
                                     <li>Towels & bathrobes</li>
-                                    <li>Mid-stay cleaning</li>
-                                    <li>End-of-stay cleaning</li>
-                                    <li>Welcome pack</li>
+                                    <li>Mid & end cleaning</li>
+                                    <li>2 parking spaces</li>
                                 </ul>
                             </div>
                         </div>
                         
-                        <div class="accommodation-link">
-                            <a href="https://www.airbnb.co.uk/rooms/38691452?check_in=2025-12-28&check_out=2026-01-04&guests=1&adults=10" target="_blank" class="button-secondary">View on Airbnb</a>
+                        <a href="https://www.airbnb.co.uk/rooms/38691452?check_in=2025-12-28&check_out=2026-01-04&guests=1&adults=10" target="_blank" class="btn-airbnb">View on Airbnb (don't book!)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="section-compact section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why La Tania?</h2>
+                </div>
+                
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3>Perfect Base</h3>
+                        <p>Quiet village between Courchevel & Méribel. Quick gondola to Courchevel 1850, ski down the blue run home.</p>
+                    </div>
+                    <div class="location-card">
+                        <h3>3 Valleys Access</h3>
+                        <p>600km of pistes, 328 runs, altitude up to 3,230m. The world's largest ski area at your doorstep.</p>
+                    </div>
+                    <div class="location-card">
+                        <h3>Village Charm</h3>
+                        <p>Car-free centre, authentic atmosphere, good restaurants, 25 mins from Courchevel's après-ski.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="costs" class="section-compact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Cost Breakdown</h2>
+                    <p class="section-subtitle">Everything you need to budget for the week</p>
+                </div>
+                
+                <div class="costs-container">
+                    <!-- Essential Costs -->
+                    <div class="cost-category essential">
+                        <h3>Essential Costs</h3>
+                        <div class="cost-items">
+                            <div class="cost-item">
+                                <div class="cost-label">
+                                    <strong>Accommodation</strong>
+                                    <span>7 nights, full chalet</span>
+                                </div>
+                                <div class="cost-amount">£623-748 pp</div>
+                                <div class="cost-note">£748 with 10 people, £623 with 12</div>
+                            </div>
+                            
+                            <div class="cost-item">
+                                <div class="cost-label">
+                                    <strong>Flights</strong>
+                                    <span>Gatwick-Geneva return</span>
+                                </div>
+                                <div class="cost-amount">~£460</div>
+                                <div class="cost-note">EasyJet 28 Dec 06:10 out, 4 Jan 19:55 back</div>
+                            </div>
+                            
+                            <div class="cost-item">
+                                <div class="cost-label">
+                                    <strong>Transfers</strong>
+                                    <span>Geneva to La Tania return</span>
+                                </div>
+                                <div class="cost-amount">~£80 pp</div>
+                                <div class="cost-note">Group booking, 2.5 hour journey</div>
+                            </div>
+                            
+                            <div class="cost-item">
+                                <div class="cost-label">
+                                    <strong>Ski Pass</strong>
+                                    <span>6 days, 3 Valleys</span>
+                                </div>
+                                <div class="cost-amount">£340-350</div>
+                                <div class="cost-note">Courchevel only ~£300</div>
+                            </div>
+                        </div>
+                        <div class="subtotal">
+                            <strong>Essential Total:</strong> £1,500-1,640 per person
+                        </div>
+                    </div>
+                    
+                    <!-- Optional Costs -->
+                    <div class="cost-category optional">
+                        <h3>Optional Extras</h3>
+                        <div class="cost-items">
+                            <div class="cost-item">
+                                <div class="cost-label">
+                                    <strong>Equipment Rental</strong>
+                                    <span>6 days (shop collection)</span>
+                                </div>
+                                <div class="cost-amount">£130-200</div>
+                                <div class="cost-note">Skis+boots. Add £30-40 for helmet</div>
+                            </div>
+                            
+                            <div class="cost-item">
+                                <div class="cost-label">
+                                    <strong>Ski Lessons</strong>
+                                    <span>ESF La Tania</span>
+                                </div>
+                                <div class="cost-amount">From €305 pp</div>
+                                <div class="cost-note">Group: €305/week mornings<br>
+                                Private: €650/day or €419/half day (up to 6 people)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Budget -->
+                    <div class="cost-category additional">
+                        <h3>Budget For</h3>
+                        <div class="budget-items">
+                            <span>Food & drinks (restaurants/supermarket)</span>
+                            <span>Travel insurance (essential!)</span>
+                            <span>Mountain lunches (~€15-20/day)</span>
+                            <span>Après-ski activities</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="location" class="section">
-            <div class="container">
-                <h2>Why La Tania?</h2>
-                <div class="location-content">
-                    <div class="location-text">
-                        <p>Having spent countless weeks exploring the 3 Valleys, I can confidently say La Tania is the perfect base for our trip. It's a charming, car-free village that offers the best of both worlds: quick access to the entire 3 Valleys ski area whilst maintaining a peaceful, authentic Alpine atmosphere.</p>
-                        
-                        <h3>Perfect Location</h3>
-                        <ul class="location-benefits">
-                            <li><strong>Strategic Position:</strong> Nestled between Courchevel and Méribel, giving easy access to all 600km of the 3 Valleys</li>
-                            <li><strong>Quick Links:</strong> The gondola takes you straight up to Courchevel 1850 in minutes</li>
-                            <li><strong>Ski-in Access:</strong> The Morettaz Blanche blue run leads right into the village</li>
-                            <li><strong>Peaceful Setting:</strong> Away from the crowds but just 25 minutes from Courchevel's famous après-ski</li>
-                        </ul>
-                        
-                        <h3>The 3 Valleys Advantage</h3>
-                        <p>With your lift pass, you'll have access to:</p>
-                        <ul class="ski-stats">
-                            <li>600km of interconnected pistes</li>
-                            <li>328 ski runs across all levels</li>
-                            <li>Altitudes up to 3,230m (guaranteed snow)</li>
-                            <li>Three distinct valleys to explore</li>
-                            <li>World-class ski schools and facilities</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing" class="section section-alt">
-            <div class="container">
-                <h2>Investment Breakdown</h2>
-                <p class="pricing-intro">Here's what you can expect to budget for the week. All prices are per person and based on 10-12 people sharing the chalet.</p>
                 
-                <div class="pricing-cards">
-                    <div class="pricing-card featured">
-                        <h3>Accommodation</h3>
-                        <div class="price">£623 - £748</div>
-                        <p class="price-note">per person for 7 nights</p>
-                        <ul>
-                            <li>Luxury chalet with all amenities</li>
-                            <li>Hot tub, sauna & spa</li>
-                            <li>All cleaning included</li>
-                            <li>Towels & bathrobes provided</li>
-                        </ul>
-                        <p class="price-detail">£748 with 10 people<br>£623 with 12 people</p>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h3>Ski Passes (6 days)</h3>
-                        <div class="price">£340 - £350</div>
-                        <p class="price-note">per adult</p>
-                        <ul>
-                            <li><strong>Courchevel Only:</strong> ~£300</li>
-                            <li><strong>3 Valleys:</strong> £340-350</li>
-                            <li>6 days for the price of 5!</li>
-                            <li>Family passes available</li>
-                        </ul>
-                        <p class="price-detail">Prices may vary slightly</p>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h3>Equipment Rental</h3>
-                        <div class="price">£130 - £200</div>
-                        <p class="price-note">for 6 days</p>
-                        <ul>
-                            <li><strong>Skis only:</strong> £80-180</li>
-                            <li><strong>Skis + Boots:</strong> £130-200</li>
-                            <li><strong>Helmet:</strong> £30-40</li>
-                            <li>Delivery to chalet available</li>
-                        </ul>
-                        <p class="price-detail">Depends on equipment level</p>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h3>Flights</h3>
-                        <div class="price">~£460</div>
-                        <p class="price-note">London Gatwick to Geneva</p>
-                        <ul>
-                            <li><strong>Outbound:</strong> 28 Dec, 06:10-08:50</li>
-                            <li><strong>Return:</strong> 4 Jan, 19:55-20:35</li>
-                            <li>EasyJet with 23kg hold bag</li>
-                            <li>2-2.5 hour transfer to resort</li>
-                        </ul>
-                        <p class="price-detail">Looking for better deals - will update</p>
-                    </div>
-                </div>
-                
-                <div class="total-estimate">
-                    <h3>Estimated Total per Person</h3>
-                    <p class="total-price">£1,550 - £1,800</p>
-                    <p class="total-note">Including accommodation (£623-748), ski pass (£340), equipment (£130-200), and flights (£460). Food and drinks additional.</p>
+                <div class="total-box">
+                    <p class="total-label">All-in estimate (with equipment & food):</p>
+                    <p class="total-amount">£1,800-2,100 per person</p>
                 </div>
             </div>
         </section>
 
-        <section id="gallery" class="section">
+        <section id="join" class="section-compact section-cta">
             <div class="container">
-                <h2>Chalet & Resort Gallery</h2>
-                <p class="gallery-intro">Photos of Chalet Le Koala and La Tania will be added here soon. In the meantime, check out the <a href="https://www.airbnb.co.uk/rooms/38691452" target="_blank">Airbnb listing</a> for chalet photos.</p>
-                <div class="gallery-grid">
-                    <!-- Placeholder for images -->
-                    <div class="gallery-placeholder">
-                        <p>Gallery coming soon...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section section-cta">
-            <div class="container">
-                <h2>Ready to Join?</h2>
-                <div class="contact-content">
-                    <p>Spaces are limited to 10-12 people, and New Year's week is always popular. If you're interested, get in touch soon!</p>
+                <h2>Interested?</h2>
+                <div class="join-content">
+                    <p>Spaces limited to 10-12 people. New Year's week is always popular!</p>
+                    
                     <div class="next-steps">
-                        <h3>Next Steps:</h3>
-                        <ol>
-                            <li>Let me know if you're interested (no commitment yet)</li>
-                            <li>I'll add you to the WhatsApp group for updates</li>
-                            <li>Confirm your spot with a deposit when ready</li>
-                            <li>Start getting excited for an amazing ski week!</li>
-                        </ol>
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>Message me to express interest (no commitment)</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>I'll add you to the WhatsApp group</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p>Confirm with deposit once we have numbers</p>
+                        </div>
                     </div>
-                    <p class="contact-note">Drop me a message if you have any questions. Happy to chat through any details!</p>
+                    
+                    <p class="final-note">Drop me a message with any questions - happy to chat through the details!</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Tim's La Tania Ski Trip | <a href="https://chitintim.github.io/dec25-ski/">View First Trip (Different Group)</a></p>
-        </div>
+        <p>La Tania Trip 2025 | <a href="https://chitintim.github.io/dec25-ski/">Week 1 Group (21-28 Dec)</a></p>
     </footer>
 
     <script src="js/main.js"></script>
